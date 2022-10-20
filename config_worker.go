@@ -5,6 +5,7 @@ type Worker struct {
 	GoTechBookFrameworkWorkerRedisPool        string `json:"go-tech-book-framework-worker-redis-pool" yaml:"go_tech_book_framework_worker_redis_pool"`
 	GoTechBookFrameworkWorkerRedisUrl         string `json:"go-tech-book-framework-worker-redis-url" yaml:"go_tech_book_framework_worker_redis_url"`
 	GoTechBookFrameworkWorkerRedisPassword    string `json:"go-tech-book-framework-worker-redis-password" yaml:"go_tech_book_framework_worker_redis_password"`
+	GoTechBookFrameworkWorkerNamespace        string `json:"go-tech-book-framework-worker-namespace" yaml:"go_tech_book_framework_worker_namespace"`
 	GoTechBookFrameworkWorkerRetryEnabled     bool   `json:"go-tech-book-framework-worker-retry-enabled" yaml:"go_tech_book_framework_worker_retry_enabled"`
 	GoTechBookFrameworkWorkerRetryExponential int    `json:"go-tech-book-framework-worker-retry-exponential" yaml:"go_tech_book_framework_worker_retry_exponential"`
 	GoTechBookFrameworkWorkerRetryMax         int    `json:"go-tech-book-framework-worker-retry-max" yaml:"go_tech_book_framework_worker_retry_max"`
@@ -24,5 +25,6 @@ func DefaultWorker() *Worker {
 		GoTechBookFrameworkWorkerRetryMaxDelay:    10,
 		GoTechBookFrameworkWorkerRetryMaxRandom:   0,
 		GoTechBookFrameworkWorkerRetryMinDelay:    10,
+		GoTechBookFrameworkWorkerNamespace:        PREFIX,
 	}
 }
