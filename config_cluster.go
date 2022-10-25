@@ -8,6 +8,8 @@ type Cluster struct {
 	GoTechBookFrameworkClusterRpcClientGrpcRequestTimeout   time.Duration `json:"go-tech-book-framework-cluster-rpc-client-grpc-request-timeout" yaml:"go_tech_book_framework_cluster_rpc_client_grpc_request_timeout"`
 	GoTechBookFrameworkClusterRpcClientGrpcLazyConnection   bool          `json:"go-tech-book-framework-cluster-rpc-client-grpc-lazy-connection" yaml:"go_tech_book_framework_cluster_rpc_client_grpc_lazy_connection"`
 	GoTechBookFrameworkClusterRpcServerGrpcPort             int           `json:"go-tech-book-framework-cluster-rpc-server-grpc-port" yaml:"go_tech_book_framework_cluster_rpc_server_grpc_port"`
+	GoTechBookFrameworkClusterSdEtcdUser                    string        `json:"go-tech-book-framework-cluster-sd-etcd-user" yaml:"go_tech_book_framework_cluster_sd_etcd_user"`
+	GoTechBookFrameworkClusterSdEtcdPass                    string        `json:"go-tech-book-framework-cluster-sd-etcd-pass" yaml:"go_tech_book_framework_cluster_sd_etcd_pass"`
 	GoTechBookFrameworkClusterSdEtcdDialTimeout             time.Duration `json:"go-tech-book-framework-cluster-sd-etcd-dial-timeout" yaml:"go_tech_book_framework_cluster_sd_etcd_dial_timeout"`
 	GoTechBookFrameworkClusterSdEtcdEndpoints               []string      `json:"go-tech-book-framework-cluster-sd-etcd-endpoints" yaml:"go_tech_book_framework_cluster_sd_etcd_endpoints"`
 	GoTechBookFrameworkClusterSdEtcdPrefix                  string        `json:"go-tech-book-framework-cluster-sd-etcd-prefix" yaml:"go_tech_book_framework_cluster_sd_etcd_prefix"`
@@ -25,6 +27,8 @@ type Cluster struct {
 
 func DefaultCluster() *Cluster {
 	return &Cluster{
+		GoTechBookFrameworkClusterSdEtcdUser:                    "",
+		GoTechBookFrameworkClusterSdEtcdPass:                    "",
 		GoTechBookFrameworkClusterInfoRegion:                    "",
 		GoTechBookFrameworkClusterRpcClientGrpcDialTimeout:      time.Duration(5 * time.Second),
 		GoTechBookFrameworkClusterRpcClientGrpcRequestTimeout:   time.Duration(5 * time.Second),
